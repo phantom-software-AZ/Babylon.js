@@ -1699,11 +1699,13 @@ declare module "babylonjs-gui-editor/sharedUiComponents/lines/indentedTextLineCo
 }
 declare module "babylonjs-gui-editor/sharedUiComponents/lines/linkButtonComponent" {
     import * as React from "react";
+
     interface ILinkButtonComponentProps {
         label: string;
         buttonLabel: string;
         url?: string;
         onClick: () => void;
+
         onIconClick?: () => void;
     }
     export class LinkButtonComponent extends React.Component<ILinkButtonComponentProps> {
@@ -1714,9 +1716,11 @@ declare module "babylonjs-gui-editor/sharedUiComponents/lines/linkButtonComponen
 }
 declare module "babylonjs-gui-editor/sharedUiComponents/lines/messageLineComponent" {
     import * as React from "react";
+
     interface IMessageLineComponentProps {
         text: string;
         color?: string;
+
     }
     export class MessageLineComponent extends React.Component<IMessageLineComponentProps> {
         constructor(props: IMessageLineComponentProps);
@@ -2136,6 +2140,7 @@ declare module "babylonjs-gui-editor/sharedUiComponents/tabs/propertyGrids/gui/t
         render(): JSX.Element;
     }
 }
+
 declare module "babylonjs-gui-editor" {
     export * from "babylonjs-gui-editor/legacy/legacy";
 }
@@ -3945,4 +3950,4 @@ declare module GUIEDITOR {
         constructor(props: ITextBlockPropertyGridComponentProps);
         render(): JSX.Element;
     }
-}
+}

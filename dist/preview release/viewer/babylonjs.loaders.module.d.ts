@@ -3122,6 +3122,7 @@ declare module "babylonjs-loaders/legacy/legacy" {
     export * from "babylonjs-loaders/legacy/legacy-objFileLoader";
     export * from "babylonjs-loaders/legacy/legacy-stlFileLoader";
 }
+
 declare module "babylonjs-loaders" {
     export * from "babylonjs-loaders/legacy/legacy";
 }
@@ -5914,4 +5915,4 @@ declare module BABYLON {
         private _parseBinary;
         private _parseASCII;
     }
-}
+}
