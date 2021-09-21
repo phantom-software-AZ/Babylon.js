@@ -197,7 +197,8 @@ export class VolumetricLightScatteringPostProcess extends PostProcess {
         }
 
         // Bones
-        if (mesh.useBones && mesh.computeBonesUsingShaders) {
+        // Skip skeleton with bones.length>200. Otherwise shader failes with "too many uniforms"
+        if (mesh.useBones && mesh.computeBonesUsingShaders && mesh.skeleton && mesh.skeleton.bones.length <= 200) {
             attribs.push(VertexBuffer.MatricesIndicesKind);
             attribs.push(VertexBuffer.MatricesWeightsKind);
             defines.push("#define NUM_BONE_INFLUENCERS " + mesh.numBoneInfluencers);
