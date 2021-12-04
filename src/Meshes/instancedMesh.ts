@@ -105,6 +105,14 @@ export class InstancedMesh extends AbstractMesh {
     public get receiveShadows(): boolean {
         return this._sourceMesh.receiveShadows;
     }
+    public set receiveShadows(value: boolean) {
+        if (this._sourceMesh.receiveShadows === value) {
+            return;
+        }
+
+        this._sourceMesh.receiveShadows = value;
+        this._markSubMeshesAsLightDirty();
+    }
 
     /**
      * The material of the source mesh
