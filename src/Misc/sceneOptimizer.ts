@@ -438,7 +438,12 @@ export class MergeMeshesOptimization extends SceneOptimization {
             }
 
             // Merge meshes
-            Mesh.MergeMeshes(currentPool, undefined, true);
+            try {
+                Mesh.MergeMeshes(currentPool, undefined, true);
+            } catch (error) {
+                console.error("Current pool length: " + currentPool.length + " merge error: " + error);
+                continue;
+            }
         }
 
         // Call the octree system optimization if it is defined.
