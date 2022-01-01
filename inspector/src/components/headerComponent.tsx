@@ -72,7 +72,7 @@ export class HeaderComponent extends React.Component<IHeaderComponentProps, { is
             );
         }
 
-        return <img id="logo" style={{ top: "0%" }} src="https://www.babylonjs.com/Assets/logo-babylonjs-social-twitter.png" />;
+        return <img id="logo" style={{ top: "0%" }} src="Assets/logo-babylonjs-social-twitter.png" />;
     }
 
     render() {
