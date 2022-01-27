@@ -1400,6 +1400,7 @@ declare module "babylonjs-serializers/legacy/legacy" {
     export * from "babylonjs-serializers/legacy/legacy-objSerializer";
     export * from "babylonjs-serializers/legacy/legacy-stlSerializer";
 }
+
 declare module "babylonjs-serializers" {
     export * from "babylonjs-serializers/legacy/legacy";
 }
@@ -2684,4 +2685,4 @@ declare module BABYLON {
         */
         static CreateSTL(meshes: Mesh[], download?: boolean, fileName?: string, binary?: boolean, isLittleEndian?: boolean, doNotBakeTransform?: boolean): any;
     }
-}
+}

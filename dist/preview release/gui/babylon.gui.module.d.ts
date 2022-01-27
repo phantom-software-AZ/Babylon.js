@@ -7095,6 +7095,7 @@ declare module "babylonjs-gui/3D/materials/fluentMaterial" {
 declare module "babylonjs-gui/legacy/legacy" {
     export * from "babylonjs-gui/index";
 }
+
 declare module "babylonjs-gui" {
     export * from "babylonjs-gui/legacy/legacy";
 }
@@ -13653,4 +13654,4 @@ declare module BABYLON.GUI {
      * This is here for backwards compatibility with 4.2
      */
     // export { FluentMaterial } from "babylonjs-gui/3D/materials/fluent/fluentMaterial";
-}
+}

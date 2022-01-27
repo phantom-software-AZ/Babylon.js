@@ -80,12 +80,14 @@ declare module "babylonjs-inspector/components/globalState" {
 }
 declare module "babylonjs-inspector/components/actionTabs/paneComponent" {
     import * as React from "react";
+
     import { Observable } from "babylonjs/Misc/observable";
     import { Scene } from "babylonjs/scene";
     import { PropertyChangedEvent } from "babylonjs-inspector/components/propertyChangedEvent";
     import { GlobalState } from "babylonjs-inspector/components/globalState";
     export interface IPaneComponentProps {
         title: string;
+
         scene: Scene;
         selectedEntity?: any;
         onSelectionChangedObservable?: Observable<any>;
@@ -3929,11 +3931,13 @@ declare module "babylonjs-inspector/components/actionTabs/tabs/propertyGrids/par
 }
 declare module "babylonjs-inspector/sharedUiComponents/lines/linkButtonComponent" {
     import * as React from "react";
+
     interface ILinkButtonComponentProps {
         label: string;
         buttonLabel: string;
         url?: string;
         onClick: () => void;
+
         onIconClick?: () => void;
     }
     export class LinkButtonComponent extends React.Component<ILinkButtonComponentProps> {
@@ -4179,9 +4183,11 @@ declare module "babylonjs-inspector/components/headerComponent" {
 }
 declare module "babylonjs-inspector/sharedUiComponents/lines/messageLineComponent" {
     import * as React from "react";
+
     interface IMessageLineComponentProps {
         text: string;
         color?: string;
+
     }
     export class MessageLineComponent extends React.Component<IMessageLineComponentProps> {
         constructor(props: IMessageLineComponentProps);
@@ -4305,9 +4311,11 @@ declare module "babylonjs-inspector/components/actionTabs/actionTabsComponent" {
 }
 declare module "babylonjs-inspector/components/sceneExplorer/treeItemLabelComponent" {
     import * as React from "react";
+
     interface ITreeItemLabelComponentProps {
         label: string;
         onClick?: () => void;
+
         color: string;
     }
     export class TreeItemLabelComponent extends React.Component<ITreeItemLabelComponentProps> {
@@ -4963,6 +4971,7 @@ declare module "babylonjs-inspector/sharedUiComponents/lines/popup" {
         private static _CopyStyles;
     }
 }
+
 declare module "babylonjs-inspector" {
     export * from "babylonjs-inspector/legacy/legacy";
 }
@@ -9134,4 +9143,4 @@ declare module INSPECTOR {
         static CreatePopup(title: string, windowVariableName: string, width?: number, height?: number): HTMLDivElement | null;
         private static _CopyStyles;
     }
-}
+}

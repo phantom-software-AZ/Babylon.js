@@ -16155,6 +16155,7 @@ declare module BABYLON {
          * If the source mesh receives shadows
          */
         get receiveShadows(): boolean;
+        set receiveShadows(value: boolean);
         /**
          * The material of the source mesh
          */
@@ -90545,6 +90546,7 @@ declare module BABYLON {
         shader: string;
     };
 }
+
 // Mixins
 interface Window {
     mozIndexedDB: IDBFactory;
